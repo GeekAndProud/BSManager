@@ -225,7 +225,7 @@ namespace BSManager
                 AutoUpdater.RunUpdateAsAdmin = false;
                 AutoUpdater.Synchronous = true;
                 AutoUpdater.ParseUpdateInfoEvent += AutoUpdaterOnParseUpdateInfoEvent;
-                AutoUpdater.Start("https://raw.githubusercontent.com/GeekAndProud/BSManager/master/BSManager/AutoUpdaterBSManager.json");
+                AutoUpdater.Start("https://raw.githubusercontent.com/mann1x/BSManager/master/BSManager/AutoUpdaterBSManager.json");
 
                 bSManagerVersionToolStripMenuItem.Text = "BSManager Version " + _versionInfo;
 
@@ -875,7 +875,7 @@ namespace BSManager
         {
             try
             {
-                BeginInvoke((MethodInvoker)delegate {
+                BeginInvoke((System.Windows.Forms.MethodInvoker)delegate {
                     ToolStripMenuItemHmd.Text = label;
                     ToolStripMenuItemHmd.Checked = _checked;
                 });
@@ -890,7 +890,7 @@ namespace BSManager
         {
             try
             {
-                BeginInvoke((MethodInvoker)delegate {
+                BeginInvoke((System.Windows.Forms.MethodInvoker)delegate {
                     ToolStripMenuItemDisco.Text = $"Discovered: {count}/{bsCount}";
                     toolStripMenuItemBS.DropDownItems.Add(nameBS);
                 });
@@ -931,7 +931,7 @@ namespace BSManager
                         break;
                 }
 
-                BeginInvoke((MethodInvoker)delegate {
+                BeginInvoke((System.Windows.Forms.MethodInvoker)delegate {
                     foreach (ToolStripMenuItem item in toolStripMenuItemBS.DropDownItems)
                     {
                         if (item.Text.StartsWith(_name))
